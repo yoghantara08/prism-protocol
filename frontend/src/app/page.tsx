@@ -1,5 +1,12 @@
-import Image from "next/image";
+import React from 'react'
 
-export default function Home() {
-  return <div>Prism Protocol</div>;
+const page = () => {
+  return (
+    <div>
+      page</div>
+  )
 }
+
+
+
+export default page
