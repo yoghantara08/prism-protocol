@@ -3,6 +3,8 @@ import React from "react";
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 
+import RainbowKit from "@/components/RainbowKit/RainbowKit";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -28,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <RainbowKit>{children}</RainbowKit>
       </body>
     </html>
   );

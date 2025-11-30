@@ -9,6 +9,11 @@
   --color-elevated: #25344a;
   --color-border: #3a4c6dcc;
   --color-overlay: #11152580;
+
+  --color-accent: #ff007a;
+  --color-accent-foreground: #ffffff;
+  --color-accent-muted: rgba(255, 0, 122, 0.35);
+  --color-accent-glow: rgba(255, 0, 122, 0.6);
 }
 
 html {
