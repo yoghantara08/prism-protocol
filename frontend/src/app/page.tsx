@@ -1,12 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const page = () => {
-  return (
-    <div>
-      page</div>
-  )
-}
+const App = () => {
+  return <div>Prism Protocol</div>;
+};
 
-
-
-export default page
+export default App;
