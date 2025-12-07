@@ -9,7 +9,12 @@ import Footer from "./Footer";
 import MobileNavbar from "./MobileNavbar";
 import Navbar from "./Navbar";
 
-const PageLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface PageLayoutProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const PageLayout: React.FC<PageLayoutProps> = ({ children, className }) => {
   const { isMobile } = useWindowSize();
 
   return (
@@ -23,8 +28,12 @@ const PageLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         )}
       >
         {isMobile ? <MobileNavbar /> : <Navbar />}
-        <div className="flex w-full justify-center">
-          <main className={classNames("w-full")}>{children}</main>
+        <div className="flex justify-center">
+          <main
+            className={classNames("mx-4 my-10 w-full max-w-7xl", className)}
+          >
+            {children}
+          </main>
         </div>
         <Footer />
       </div>
