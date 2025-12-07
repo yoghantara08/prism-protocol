@@ -2,19 +2,78 @@
 
 @theme inline {
   --font-inter: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-mono);
 
-  --color-background: #111525;
-  --color-surface: #182033;
-  --color-elevated: #25344a;
-  --color-border: #3a4c6dcc;
-  --color-overlay: #11152580;
+  --color-background: #0e0f1a;
+  --color-surface: #16182b;
+  --color-elevated: #20233a;
+  --color-border: #3a3f5ecc;
+  --color-overlay: #0e0f1a80;
 
-  --color-accent: #ff007a;
-  --color-accent-foreground: #ffffff;
-  --color-accent-muted: rgba(255, 0, 122, 0.35);
-  --color-accent-glow: rgba(255, 0, 122, 0.6);
+  --color-accent: #5468ff;
+  --color-accent-text: #ffffff;
+  --color-accent-muted: rgba(84, 104, 255, 0.25);
+  --color-accent-glow: rgba(84, 104, 255, 0.55);
+
+  --color-primary: #e2e6ff;
+  --color-secondary: #c0caff;
+  --color-tertiary: #909dff;
+  --color-muted: #8790ae;
+
+  --color-success: #4de39a;
+  --color-warning: #ffc85e;
+  --color-danger: #ff6363;
 }
+
+/* @theme inline {
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-mono);
+
+  --color-background: #0d1310;
+  --color-surface: #13201a;
+  --color-elevated: #1b2f25;
+  --color-border: #365749cc;
+  --color-overlay: #0d131080;
+
+  --color-accent: #1fe39a;
+  --color-accent-text: #003324;
+  --color-accent-muted: rgba(31, 227, 154, 0.25);
+  --color-accent-glow: rgba(31, 227, 154, 0.55);
+
+  --color-primary: #ddfff2;
+  --color-secondary: #b2f5db;
+  --color-tertiary: #79d9b6;
+  --color-muted: #889a90;
+
+  --color-success: #4df5a9;
+  --color-warning: #ffe680;
+  --color-danger: #ff6f6f;
+} */
+/* 
+@theme inline {
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-mono);
+
+  --color-background: #0d1118;
+  --color-surface: #131a24;
+  --color-elevated: #1a2533;
+  --color-border: #30425acc;
+  --color-overlay: #0d111880;
+
+  --color-accent: #00d5ff;
+  --color-accent-text: #00252e;
+  --color-accent-muted: rgba(0, 213, 255, 0.25);
+  --color-accent-glow: rgba(0, 213, 255, 0.55);
+
+  --color-primary: #e8faff;
+  --color-secondary: #b8e8f2;
+  --color-tertiary: #78c9d7;
+  --color-muted: #8e9bb0;
+
+  --color-success: #3ee58d;
+  --color-warning: #ffdd66;
+  --color-danger: #ff5f5f;
+} */
 
 html {
   scrollbar-width: none;
@@ -26,11 +85,13 @@ html {
 }
 
 body {
-  @apply bg-surface font-inter text-white;
+  @apply bg-background font-inter text-primary;
 }
 
 * {
   scroll-behavior: smooth;
+
+  @apply border-border;
 
   &::-webkit-scrollbar {
     width: 4px;
