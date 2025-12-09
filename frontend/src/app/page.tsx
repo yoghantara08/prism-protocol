@@ -1,17 +1,11 @@
-import React from "react";
-
-import Button from "@/components/Button/Button";
+"use client";
 import PageLayout from "@/components/Layout/PageLayout";
+import FHEExample from "@/components/RainbowKit/FHEExample";
 
 const App = () => {
   return (
     <PageLayout>
-      <div className="m-10 space-x-3">
-        <Button className="w-40">Approve</Button>
-        <Button variant="secondary" className="w-40">
-          Swap
-        </Button>
-      </div>
+      <FHEExample />
     </PageLayout>
   );
 };

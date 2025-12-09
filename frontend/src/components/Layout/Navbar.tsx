@@ -54,7 +54,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <ConnectButton />
+        <ConnectButton showBalance={false} />
       </div>
     </nav>
   );

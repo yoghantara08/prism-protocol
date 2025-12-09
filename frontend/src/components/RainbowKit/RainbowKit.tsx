@@ -8,7 +8,7 @@ import {
 } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
-import { base } from "wagmi/chains";
+import { sepolia } from "wagmi/chains";
 
 import { CONFIG } from "@/config/config";
 
@@ -17,7 +17,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 const config = getDefaultConfig({
   appName: "Prism Protocol",
   projectId: CONFIG.PROJECT_ID,
-  chains: [base],
+  chains: [sepolia],
   ssr: true,
 });
 
