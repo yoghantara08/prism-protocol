@@ -6,7 +6,7 @@ import TokenSelect from "../TokenSelect/TokenSelect";
 
 const BuyPanel = () => {
   return (
-    <div className="space-y-4 rounded-2xl border px-5 py-4">
+    <div className="bg-surface space-y-4 rounded-2xl px-5 py-4">
       {/* HEADER */}
       <div className="flex items-center justify-between">
         <span className="font-medium">Buy</span>

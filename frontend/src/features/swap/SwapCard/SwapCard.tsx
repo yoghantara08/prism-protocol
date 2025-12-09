@@ -1,7 +1,10 @@
 import React from "react";
 
+import Button from "@/components/Button/Button";
+
 import BuyPanel from "../BuyPanel/BuyPanel";
 import SellPanel from "../SellPanel/SellPanel";
+import SwapSummary from "../SwapSummary/SwapSummary";
 import SwapTabs from "../SwapTabs/SwapTabs";
 
 import SwapDirectionButton from "./SwapDirectionButton";
@@ -14,6 +17,10 @@ const SwapCard = () => {
         <SellPanel />
         <SwapDirectionButton />
         <BuyPanel />
+        <Button className="w-full" disabled>
+          Enter an amount
+        </Button>
+        <SwapSummary />
       </div>
     </div>
   );
