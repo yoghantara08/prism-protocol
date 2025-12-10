@@ -3,9 +3,9 @@ import { StateCreator } from "zustand";
 import { RootStore } from "./root";
 
 export type ModalSlice = {
-  txModal: boolean;
-  openTxModal: () => void;
-  closeTxModal: () => void;
+  tokenSelectModal: boolean;
+  openTokenSelectModal: () => void;
+  closeTokenSelectModal: () => void;
 };
 
 export const createModalSlice: StateCreator<
@@ -14,7 +14,7 @@ export const createModalSlice: StateCreator<
   [],
   ModalSlice
 > = (set) => ({
-  txModal: false,
-  openTxModal: () => set({ txModal: true }),
-  closeTxModal: () => set({ txModal: false }),
+  tokenSelectModal: false,
+  openTokenSelectModal: () => set({ tokenSelectModal: true }),
+  closeTokenSelectModal: () => set({ tokenSelectModal: false }),
 });

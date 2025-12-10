@@ -3,6 +3,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 
+import ModalProvider from "@/components/Modal/ModalProvider";
 import RainbowKit from "@/components/RainbowKit/RainbowKit";
 
 import "./globals.css";
@@ -31,7 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
-        <RainbowKit>{children}</RainbowKit>
+        <RainbowKit>
+          {children}
+          <ModalProvider />
+        </RainbowKit>
       </body>
     </html>
   );
