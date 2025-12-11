@@ -1,0 +1,5 @@
+@fhenixprotocol/=node_modules/@fhenixprotocol/
+@openzeppelin/=node_modules/@openzeppelin/
+@uniswap/v4-core/=node_modules/@uniswap/v4-core/
+@uniswap/v4-periphery/=node_modules/@uniswap/v4-periphery/
+forge-std/=node_modules/forge-std/src/

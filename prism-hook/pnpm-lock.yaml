@@ -11,6 +11,9 @@ importers:
       '@fhenixprotocol/contracts':
         specifier: ^0.3.1
         version: 0.3.1
+      '@openzeppelin/contracts':
+        specifier: ^5.4.0
+        version: 5.4.0
       '@uniswap/v4-core':
         specifier: github:Uniswap/v4-core
         version: https://codeload.github.com/Uniswap/v4-core/tar.gz/d153b048868a60c2403a3ef5b2301bb247884d46
