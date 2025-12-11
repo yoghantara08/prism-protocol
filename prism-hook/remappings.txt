@@ -1,5 +1,8 @@
-@fhenixprotocol/=node_modules/@fhenixprotocol/
+@fhenixprotocol/cofhe-contracts/=node_modules/@fhenixprotocol/cofhe-contracts
 @openzeppelin/=node_modules/@openzeppelin/
 @uniswap/v4-core/=node_modules/@uniswap/v4-core/
 @uniswap/v4-periphery/=node_modules/@uniswap/v4-periphery/
 forge-std/=node_modules/forge-std/src/
+
+permit2/=node_modules/@uniswap/v4-periphery/lib/permit2/
+solmate/=node_modules/@uniswap/v4-core/lib/solmate/

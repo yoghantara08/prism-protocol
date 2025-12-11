@@ -4,17 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "forge test --via-ir",
+    "deploy:testnet": "forge script script/DeployPrismHook.s.sol --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --verify --private-key befb53276d03933208e0a3cbfe518571ec708e071c61fe9e02bd876c7d73d0b9 -vvvv",
+    "deploy:dry": "forge script script/DeployPrismHook.s.sol --rpc-url https://ethereum-sepolia-rpc.publicnode.com --private-key befb53276d03933208e0a3cbfe518571ec708e071c61fe9e02bd876c7d73d0b9 -vvvv"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.24.0",
   "dependencies": {
-    "@fhenixprotocol/contracts": "^0.3.1",
+    "@fhenixprotocol/cofhe-contracts": "^0.0.13",
     "@openzeppelin/contracts": "^5.4.0",
-    "@uniswap/v4-core": "github:Uniswap/v4-core",
-    "@uniswap/v4-periphery": "github:Uniswap/v4-periphery",
+    "@uniswap/v4-core": "1.0.2",
+    "@uniswap/v4-periphery": "1.0.2",
     "forge-std": "github:foundry-rs/forge-std"
   }
 }
