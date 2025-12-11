@@ -1,0 +1,56 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@fhenixprotocol/contracts':
+        specifier: ^0.3.1
+        version: 0.3.1
+      '@uniswap/v4-core':
+        specifier: github:Uniswap/v4-core
+        version: https://codeload.github.com/Uniswap/v4-core/tar.gz/d153b048868a60c2403a3ef5b2301bb247884d46
+      '@uniswap/v4-periphery':
+        specifier: github:Uniswap/v4-periphery
+        version: https://codeload.github.com/Uniswap/v4-periphery/tar.gz/3779387e5d296f39df543d23524b050f89a62917
+      forge-std:
+        specifier: github:foundry-rs/forge-std
+        version: https://codeload.github.com/foundry-rs/forge-std/tar.gz/ebc60f500bc6870baaf321a0196fddc24d6edb03
+
+packages:
+
+  '@fhenixprotocol/contracts@0.3.1':
+    resolution: {integrity: sha512-zcxtmphGsInU+S9y5SPrrGO52ZCRDt8EpR/Jf47P5m5sGZVXyox8xPBYQs69V9NpGbORFYAewsGVWzqmvlzeAw==}
+
+  '@openzeppelin/contracts@5.4.0':
+    resolution: {integrity: sha512-eCYgWnLg6WO+X52I16TZt8uEjbtdkgLC0SUX/xnAksjjrQI4Xfn4iBRoI5j55dmlOhDv1Y7BoR3cU7e3WWhC6A==}
+
+  '@uniswap/v4-core@https://codeload.github.com/Uniswap/v4-core/tar.gz/d153b048868a60c2403a3ef5b2301bb247884d46':
+    resolution: {tarball: https://codeload.github.com/Uniswap/v4-core/tar.gz/d153b048868a60c2403a3ef5b2301bb247884d46}
+    version: 1.0.2
+
+  '@uniswap/v4-periphery@https://codeload.github.com/Uniswap/v4-periphery/tar.gz/3779387e5d296f39df543d23524b050f89a62917':
+    resolution: {tarball: https://codeload.github.com/Uniswap/v4-periphery/tar.gz/3779387e5d296f39df543d23524b050f89a62917}
+    version: 1.0.3
+
+  forge-std@https://codeload.github.com/foundry-rs/forge-std/tar.gz/ebc60f500bc6870baaf321a0196fddc24d6edb03:
+    resolution: {tarball: https://codeload.github.com/foundry-rs/forge-std/tar.gz/ebc60f500bc6870baaf321a0196fddc24d6edb03}
+    version: 1.12.0
+
+snapshots:
+
+  '@fhenixprotocol/contracts@0.3.1':
+    dependencies:
+      '@openzeppelin/contracts': 5.4.0
+
+  '@openzeppelin/contracts@5.4.0': {}
+
+  '@uniswap/v4-core@https://codeload.github.com/Uniswap/v4-core/tar.gz/d153b048868a60c2403a3ef5b2301bb247884d46': {}
+
+  '@uniswap/v4-periphery@https://codeload.github.com/Uniswap/v4-periphery/tar.gz/3779387e5d296f39df543d23524b050f89a62917': {}
+
+  forge-std@https://codeload.github.com/foundry-rs/forge-std/tar.gz/ebc60f500bc6870baaf321a0196fddc24d6edb03: {}
