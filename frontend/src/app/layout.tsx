@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
@@ -35,6 +36,7 @@ export default function RootLayout({
         <RainbowKit>
           {children}
           <ModalProvider />
+          <Toaster position="top-right" />
         </RainbowKit>
       </body>
     </html>
