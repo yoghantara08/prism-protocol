@@ -1,13 +1,18 @@
 "use client";
+import { useEffect } from "react";
+
+import { useRouter } from "next/navigation";
+
 import PageLayout from "@/components/Layout/PageLayout";
-import FHEExample from "@/components/RainbowKit/FHEExample";
 
 const App = () => {
-  return (
-    <PageLayout>
-      <FHEExample />
-    </PageLayout>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/swap");
+  }, [router]);
+
+  return <PageLayout>Loading...</PageLayout>;
 };
 
 export default App;
