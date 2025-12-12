@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "forge test --via-ir",
-    "deploy:testnet": "forge script script/DeployPrismHook.s.sol --rpc-url https://ethereum-sepolia-rpc.publicnode.com --broadcast --verify --private-key befb53276d03933208e0a3cbfe518571ec708e071c61fe9e02bd876c7d73d0b9 -vvvv",
-    "deploy:dry": "forge script script/DeployPrismHook.s.sol --rpc-url https://ethereum-sepolia-rpc.publicnode.com --private-key befb53276d03933208e0a3cbfe518571ec708e071c61fe9e02bd876c7d73d0b9 -vvvv"
+    "deploy:testnet": "forge script script/DeployPrismHook.s.sol --rpc-url $RPC_URL --broadcast --verify --private-key $PRIVATE_KEY -vvvv",
+    "deploy:dry": "forge script script/DeployPrismHook.s.sol --rpc-url $RPC_URL --private-key $PRIVATE_KEY -vvvv"
   },
   "keywords": [],
   "author": "",
