@@ -5,6 +5,7 @@ import { StateCreator } from "zustand";
 import { Order, OrderStatus, SwapDirection } from "@/types";
 
 import { RootStore } from "./root";
+import { CONFIG } from "@/config/config";
 
 export type SwapSlice = {
   inputAmount: string;
@@ -39,8 +40,8 @@ export const createSwapSlice: StateCreator<
 > = (set, get) => ({
   inputAmount: "",
   outputAmount: "",
-  inputToken: null,
-  outputToken: null,
+  inputToken: CONFIG.USDC_ADDRESS,
+  outputToken: CONFIG.USDT_ADDRESS,
   swapDirection: "buy",
   isSwapping: false,
   orderHandle: null,

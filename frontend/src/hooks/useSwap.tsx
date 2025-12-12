@@ -13,6 +13,7 @@ import {
   useTokenApproval,
   useTokenBalance,
 } from "./useTokenApproval";
+import useUniswapQuote from "./useUniswapQuote";
 
 interface UseSwapOptions {
   poolKey: PoolKey;
@@ -36,9 +37,10 @@ export function useSwap({
     orderHandle,
     isSwapping,
     setIsSwapping,
-    setOrderHandle,
     resetSwap,
   } = useRootStore();
+
+  const { setOutputAmount } = useRootStore();
 
   const [needsApproval, setNeedsApproval] = useState(false);
 
@@ -79,6 +81,27 @@ export function useSwap({
     setNeedsApproval(needsApproval);
     return needsApproval;
   }, [inputAmount, inputToken, allowance, inputTokenDecimals]);
+
+  const { amountOut } = useUniswapQuote(
+    inputToken,
+    outputToken,
+    poolKey.fee,
+    inputAmount,
+    inputTokenDecimals,
+  );
+
+  useEffect(() => {
+    if (amountOut) {
+      try {
+        const formatted = formatUnits(amountOut, outputTokenDecimals);
+        setOutputAmount(formatted);
+      } catch {
+        setOutputAmount("");
+      }
+    } else {
+      setOutputAmount("");
+    }
+  }, [amountOut, outputTokenDecimals, setOutputAmount]);
 
   const checkBalance = useCallback(() => {
     if (!inputAmount || !balance) return false;
@@ -144,8 +167,13 @@ export function useSwap({
     if (isApprovalSuccess) {
       console.log("✅ Token approval successful");
       refetchAllowance();
+      (async () => {
+        try {
+          await executeSwap();
+        } catch {}
+      })();
     }
-  }, [isApprovalSuccess, refetchAllowance]);
+  }, [isApprovalSuccess, refetchAllowance, executeSwap]);
 
   useEffect(() => {
     if (isOrderPlaced) {

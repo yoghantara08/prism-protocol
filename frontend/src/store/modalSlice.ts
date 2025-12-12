@@ -2,9 +2,12 @@ import { StateCreator } from "zustand";
 
 import { RootStore } from "./root";
 
+export type TokenSelectType = "input" | "output" | null;
+
 export type ModalSlice = {
   tokenSelectModal: boolean;
-  openTokenSelectModal: () => void;
+  tokenSelectType: TokenSelectType;
+  openTokenSelectModal: (type: TokenSelectType) => void;
   closeTokenSelectModal: () => void;
 };
 
@@ -15,6 +18,9 @@ export const createModalSlice: StateCreator<
   ModalSlice
 > = (set) => ({
   tokenSelectModal: false,
-  openTokenSelectModal: () => set({ tokenSelectModal: true }),
-  closeTokenSelectModal: () => set({ tokenSelectModal: false }),
+  tokenSelectType: null,
+  openTokenSelectModal: (type) =>
+    set({ tokenSelectModal: true, tokenSelectType: type }),
+  closeTokenSelectModal: () =>
+    set({ tokenSelectModal: false, tokenSelectType: null }),
 });
